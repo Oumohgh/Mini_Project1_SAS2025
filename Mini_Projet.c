@@ -2,7 +2,7 @@
 
 int main (){
 int nbr_etudiants,i;
-float note;
+float note,sum ,moy;
 
 do
 {
@@ -23,12 +23,17 @@ for (i=0;i<nbr_etudiants;i++){
         notes[i]=note;
     }
 
-
 for ( i = 0; i < nbr_etudiants; i++)
 {
+    sum = sum +notes[i];
     
 }
+moy = sum / nbr_etudiants;
+printf
+for(i=0; i < nbr_etudiants;i++)
 
+printf("\n        *******      Gestion des etudiants    ****** \n\n");
+printf("          ============================================= \n\n");
 return 0;
 
 }
