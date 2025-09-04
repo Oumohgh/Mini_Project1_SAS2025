@@ -49,11 +49,11 @@ float notes[nbr_etudiants];
 
 for (i=0;i<nbr_etudiants;i++){
         printf("Saisir la note de l'etudiant %d : ", i+1);
-        scanf("%.2f", &notes[i]);
+        scanf("%f", &notes[i]);
         while (notes[i]<0 || notes[i]>20){
             printf("La note doit etre entre 0 et 20!! \n");
             printf("Saisir la note de l'etudiant %d : ", i+1);
-            scanf("%.2f", &notes[i]);
+            scanf("%f", &notes[i]);
         }
         
     }
@@ -62,7 +62,7 @@ for (i=0;i<nbr_etudiants;i++){
     maxn = trouverMax(notes, nbr_etudiants);
     printf("la note la plus élevée :%.2f \n",maxn);
     minn = trouverMin(notes, nbr_etudiants);
-    printf("La note la plus faible : %.2f\n", minn);\
+    printf("La note la plus faible : %.2f\n", minn);
 
     return 0;
 }
