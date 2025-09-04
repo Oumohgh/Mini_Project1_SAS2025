@@ -2,11 +2,11 @@
 
 int main (){
 int nbr_etudiants,i;
-float note,sum ,moy;
+float note,sum ,moy,maxn,minn;
 
 do
 {
-printf("Combien d etudiants :");
+printf("Entrez le nombre d'eleves (max.30) :");
 scanf("%d",&nbr_etudiants);
 
 }  while ( nbr_etudiants>30 ||  nbr_etudiants<=0);
@@ -25,12 +25,18 @@ for (i=0;i<nbr_etudiants;i++){
 
 for ( i = 0; i < nbr_etudiants; i++)
 {
-    sum = sum +notes[i];
+    sum += notes[i];
     
 }
 moy = sum / nbr_etudiants;
-printf
-for(i=0; i < nbr_etudiants;i++)
+printf("la moy est %d:",moy);
+for(i=0; i < nbr_etudiants;i++){
+
+      if (notes[i] > maxn){
+          maxn= notes[i];
+          printf("")
+      }
+}
 
 printf("\n        *******      Gestion des etudiants    ****** \n\n");
 printf("          ============================================= \n\n");
