@@ -57,13 +57,12 @@ for (i=0;i<nbr_etudiants;i++){
         }
         
     }
-}
-
-    moy = calculerMoyenne(notes,nb_etudiants);
+    moy = calculerMoyenne(notes,nbr_etudiants);
     printf("La moyenne du classe est: %.2f\n", moy);
-    maxn = trouverMax(notes[nbr_etudiants], nb_students);
+    maxn = trouverMax(notes, nbr_etudiants);
     printf("la note la plus élevée :%.2f \n",maxn);
-    minn = trouverMin(notes[nbr_etudiants], nb_etudiants);
+    minn = trouverMin(notes, nbr_etudiants);
     printf("La note la plus faible : %.2f\n", minn);\
 
     return 0;
+}
