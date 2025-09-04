@@ -24,6 +24,16 @@ float trouverMin(float notes[], int n){
     }
     return min;
 }
+int compterReussites(int notes[], int n){
+    int reussi =0;
+    for (int i = 0; i < n; i++)
+    {
+        if(notes[i]>=10){
+            reussi++;
+        }
+    }
+  return (reussi);  
+}
 
 int main (){
 int nbr_etudiants,i,nbr_reussi;
@@ -35,42 +45,25 @@ printf("Entrez le nombre d'eleves (max.30) :");
 scanf("%d",&nbr_etudiants);
 
 }  while ( nbr_etudiants>30 ||  nbr_etudiants<=0);
-int notes[nbr_etudiants];
+float notes[nbr_etudiants];
 
 for (i=0;i<nbr_etudiants;i++){
         printf("Saisir la note de l'etudiant %d : ", i+1);
-        scanf("%f", &note);
-        while (note<0 || note>20){
+        scanf("%.2f", &notes[i]);
+        while (notes[i]<0 || notes[i]>20){
             printf("La note doit etre entre 0 et 20!! \n");
             printf("Saisir la note de l'etudiant %d : ", i+1);
-            scanf("%.2f", &note);
+            scanf("%.2f", &notes[i]);
         }
-        notes[i]=note;
+        
     }
-
-
-for(i=0; i < nbr_etudiants;i++){
-
-      if (notes[i] > maxn){
-          maxn= notes[i];
-      }
-  else if(notes[i] <= minn){
-          maxn= notes[i];
-}
-printf("la note la plus élevée %.2f ",maxn);
-printf("note la plus faible %.2f ",minn);
-}
 }
 
-printf("\n        *******      Gestion des etudiants    ****** \n\n");
-printf("          ============================================= \n\n");
-return 0;
+    moy = calculerMoyenne(notes,nb_etudiants);
+    printf("La moyenne du classe est: %.2f\n", moy);
+    maxn = trouverMax(notes[nbr_etudiants], nb_students);
+    printf("la note la plus élevée :%.2f \n",maxn);
+    minn = trouverMin(notes[nbr_etudiants], nb_etudiants);
+    printf("La note la plus faible : %.2f\n", minn);\
 
-moyenne = calculerMoyenne(students,nb_students);
-    printf("La moyenne du classe est: %.2f\n", moyenne);
-    max = trouverMax(students, nb_students);
-    printf("Le maximum est: %.2f\n", max);
-    min = trouverMin(students, nb_students);
-    printf("Le minimum est: %.2f\n", min);
     return 0;
-}
