@@ -43,7 +43,7 @@ int compterReussites(float notes[], int n){
 int main() {
     int nbr_etudiants, i, choix;
     float notes[max_etudiants];
-    int saisies = 0; // Pour vérifier si on a saisi des notes
+    int saisies = 0; 
 
     do {
         printf("Entrez le nombre d'etudiants (max. %d) : ", max_etudiants);
